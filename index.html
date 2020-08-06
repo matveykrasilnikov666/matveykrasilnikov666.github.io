@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы численного интегрирования</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Методы численного интегрирования онлайн</h1>
+        <img id='headerImg' src="img/integral.png" alt="">
+    </div>
+
+    <div id="main">
+        <form name='frm' id='frm'>
+            <input type="text" class='area' id="top"> Введите верхний предел<br>
+            <input type="text" class='area' id='bot'> Введите нижний предел<br>
+            <input type="text" class='area' id='accuracy'> Введите точность интегрирования<br>
+            <input name="method" type="radio" id="simpson" class='methods' value='simpson' checked> Методом Симпсона<br>
+            <input name="method" type="radio" id="trap" class='methods' value='trap'> Методом трапеции<br>
+            <input type="button" value='Решить' id="btnCalc" onclick='btnCalcClick();'>
+        </form>
+        <form name='integrals' id='integr'>
+            <input type="radio" id='first' class='integrals' name='integral' checked>Sin(x^2 + 2x)<br>
+            <input type="radio" id='second' class='integrals' name='integral'>Ln(1+x)<br>
+            <input type="radio" id='third' class='integrals' name='integral'>Ln(5x) + Sin(2x)<br>
+            <input type="radio" id='fourth' class='integrals' name='integral'>Sin(x) + Cos(Ln(x))
+        </form>
+    </div>
+
+    <div id="otvet">
+        <h3 id="result"></h3>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
